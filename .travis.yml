@@ -29,8 +29,6 @@ script:
 - hexo generate
 
 after_success:
-- cd ./public
-- git init
 - sed -i "" "s/repo_token/${GITHUB_REPO_TOKEN}/g" ./_config.yml
 - sed -i "" "s/commit_message/[Travis] updated\: ${$(date "+%Y-%m-%d %H:%M:%S")}/g" ./_config.yml
 - hexo deploy
