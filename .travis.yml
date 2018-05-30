@@ -15,7 +15,6 @@ branches:
     - source
 
 before_install:
-- DATE="`date +'%H:%M %b %d %Y'`"
 - git config --global user.name "skyang"
 - git config --global user.email "hhyuestc@gmail.com"
 - curl -o- -L https://yarnpkg.com/install.sh | bash
@@ -29,6 +28,10 @@ script:
 - hexo clean
 - hexo generate
 
-after_success:
-- sed -i "s/repo_token/${GITHUB_REPO_TOKEN}/g;s/commit_message/[Travis] updated: $DATE/g" ./_config.yml
-- hexo deploy
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_REPO_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: master
