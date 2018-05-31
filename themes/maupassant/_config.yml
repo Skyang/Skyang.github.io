@@ -1,148 +1,3 @@
-# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
-
-# Site
-title: skyang # your blog title name
-subtitle:  
-author: Haoyang Hu # 作者
-language: 
-- zh-CN
-- en
-timezone: 
-
-# custom Site settings
-# more detail check out docs
-SEOTitle: skyang's blog 
-header-img: 
-email: hhyuestc@gmail.com
-description: "个人站点、博客"
-keyword: # seo key words
-
-favicon: favicon.ico # your favicon png
-# custom end
-
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://skyang.github.io
-root: /
-permalink: :year/:month/:day/:title/
-permalink_defaults:
-  lang: en  
-
-# SNS settings
-# RSS:
-weibo_username: 
-zhihu_username: 
-github_username: skyang
-twitter_username: 
-facebook_username:  
-linkedin_username:  
-
-# Build settings
-anchorjs: false                        # if you want to customize anchor. check out line:181 of `post.html`
-
-# Sidebar settings
-sidebar-about-description: # 个人描述
-sidebar-avatar:     # use absolute URL
-
-# Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
-
-# friends
-friends:  # 友链
-
-# Directory
-source_dir: source
-public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-i18n_dir: :lang
-skip_render:
-about_dir: about
-
-# Writing
-new_post_name: :title.md # File name of new posts
-default_layout: post
-titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
-filename_case: 0
-render_drafts: false
-post_asset_folder: true
-relative_link: false
-future: true
-highlight:
-  enable: true
-  line_number: false
-  auto_detect: false
-  tab_replace:
-
-# Category & Tag
-default_category: uncategorized
-category_map:
-tag_map:
-
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
-time_format: HH:mm:ss
-
-# Pagination
-## Set per_page to 0 to disable pagination
-per_page: 8
-pagination_dir: page
-
-# Extensions
-## Plugins: https://hexo.io/plugins/
-feed:
-  type: atom
-  path: atom.xml
-  limit: false
-  hub:
-  content: true
-  content_limit:
-  content_limit_delim: ' '
-
-all_minifier: true
-image_minifier:
-  enable: true
-  interlaced: false
-  multipass: false
-  optimizationLevel: 2
-  pngquant: false
-  progressive: true
-  silent: false
-
-## Themes: https://hexo.io/themes/
-theme: maupassant
-
-# post default images
-post-default-img: #博文默认的图片
-post-default-img-mobile: #移动端显示的图片
-
-# search api , set your custom key
-swiftype_key: 
-
-# archive page title 
-archive:
-    title: archives
-    description: 可以根据归档日期检索所有文件
-
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: https://repo_token@github.com/skyang/skyang.github.io.git
-  branch: master
-  message: commit_message
-
-
-## Theme maupassant config
 disqus: ## Your disqus_shortname, e.g. username
 uyan: ## Your uyan_id. e.g. 1234567
 livere: ## Your livere data-uid, e.g. MTAyMC8zMDAxOC78NTgz
@@ -209,9 +64,6 @@ menu:
   - page: home
     directory: .
     icon: fa-home
-  - page: timeline
-    directory: timeline/
-    icon: fa-timeline
   - page: archive
     directory: archives/
     icon: fa-archive
@@ -230,19 +82,27 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
   - recent_comments
   # - links
 
-timeline:
-  - num: 1
-    word: 2014/06/12-Start
-  - num: 2
-    word: 2014/11/29-XXX
-  - num: 3
-    word: 2015/02/18-DDD
-  - num: 4
-    word: More
+# links:
+#   - title: site-name1
+#     url: http://www.example1.com/
+#   - title: site-name2
+#     url: http://www.example2.com/
+#   - title: site-name3
+#     url: http://www.example3.com/
+
+# timeline:
+#   - num: 1
+#     word: 2014/06/12-Start
+#   - num: 2
+#     word: 2014/11/29-XXX
+#   - num: 3
+#     word: 2015/02/18-DDD
+#   - num: 4
+#     word: More
 
 # Static files
 js: js
 css: css
 
 # Theme version
-version: 0.1.0
+version: 0.0.0
