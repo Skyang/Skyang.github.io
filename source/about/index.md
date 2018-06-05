@@ -1,3 +1,6 @@
+---
+comments: false
+---
 # About Me
 <i class="fa fa-user fa-1x"></i> Name: [Haoyang Hu](https://skyang.github.io)
 
